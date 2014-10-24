@@ -1,0 +1,37 @@
+# Database settings.
+database:
+
+  # the name of your JDBC driver
+  driverClass: com.mysql.jdbc.Driver
+
+  # the username
+  user: root
+
+  # the password
+  password: root
+
+  # the JDBC URL
+  url: jdbc:mysql://localhost:8889/iotcloud
+
+# use the simple server factory if you only want to run on a single port
+server:
+  type: simple
+  applicationContextPath: /
+  adminContextPath: /admin
+  connector:
+    type: http
+    port: 8080
+
+# Logging settings.
+logging:
+
+  # The default level of all loggers. Can be OFF, ERROR, WARN, INFO, DEBUG, TRACE, or ALL.
+  level: INFO
+
+  # Logger-specific levels.
+  loggers:
+
+    com.dcsquare.iotcloud.rest: DEBUG
+
+  appenders:
+    - type: console
