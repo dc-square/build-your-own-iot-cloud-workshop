@@ -14,7 +14,7 @@ public class Publisher {
         this.client = client;
         this.randomGenerator = new RandomGenerator();
 
-        TEMPERATURE_TOPIC = "iotcon/"+client.getClientId()+"/temperature";
+        TEMPERATURE_TOPIC = "iotcloud/"+client.getClientId()+"/temperature";
     }
 
     public void publishData() throws MqttException {

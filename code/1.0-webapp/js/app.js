@@ -85,7 +85,7 @@ $(document).ready(function () {
 
         //Gets Called if the connection has successfully been established
         onSuccess: function () {
-            client.subscribe("iotcon/+/temperature");
+            client.subscribe("iotcloud/+/temperature");
         },
 
         //Gets Called if the connection could not be established
@@ -99,9 +99,9 @@ $(document).ready(function () {
 
         var topic = message.destinationName;
 
-        if (topic === "iotcon/device1/temperature") {
+        if (topic === "iotcloud/device1/temperature") {
             setTemperatureDevice1(message.payloadString);
-        } else if (topic === "iotcon/device2/temperature") {
+        } else if (topic === "iotcloud/device2/temperature") {
             setTemperatureDevice2(message.payloadString);
         }
 
